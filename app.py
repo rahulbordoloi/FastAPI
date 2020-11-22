@@ -50,5 +50,5 @@ async def predict(data: BankNote):
 if __name__ == '__main__':
 
     # CLI: uvicorn app:app --reload --port 5000
-    uvicorn.run('app:app', host = '127.0.0.1', port = 5000, debug = True, reload = True)
+    uvicorn.run(app, debuh = True, port = 5000)
 
