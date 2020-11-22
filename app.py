@@ -3,6 +3,7 @@ import uvicorn
 from fastapi import FastAPI
 from Schema import BankNote
 import pickle
+import os
 
 # Creating a FastAPI Instance
 app = FastAPI()
@@ -48,5 +49,6 @@ async def predict(data: BankNote):
 
 # Run the API with `uvicorn`
 if __name__ == '__main__':
-    uvicorn.run(app, debug = True)
+    port = int(os.environ.get("PORT", 5000))
+    uvicorn.run(app, debug = True, host = '0.0.0.0', port = port)
 
