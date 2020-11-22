@@ -1,2 +1,3 @@
-# Fast-API
-Demo Repository for Fast-API Implementation 
+# FastAPI
+
+Demo/Practice Repository for FastAPI Implementation and Deployment.
