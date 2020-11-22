@@ -1,7 +1,7 @@
 # Installing Libraries
 import uvicorn
 from fastapi import FastAPI
-from BankNotes import BankNote
+from Schema import BankNote
 import pickle
 
 # Creating a FastAPI Instance
@@ -50,5 +50,5 @@ async def predict(data: BankNote):
 if __name__ == '__main__':
 
     # CLI: uvicorn app:app --reload --port 5000
-    uvicorn.run(app, host = '127.0.0.1', port = 5000, reload = True)
+    uvicorn.run('app:app', host = '127.0.0.1', port = 5000, debug = True, reload = True)
 
